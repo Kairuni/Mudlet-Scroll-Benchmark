@@ -35,7 +35,6 @@ function sb.scrollBufferDown()
   selectCurrentLine();
 
   if (sb.lineCount <= 0) then
-    echo("Finished down.");
     sb.endTime = getEpoch();
     tempTimer(0, sb.displayResults);
   else
@@ -58,7 +57,6 @@ function sb.scrollBufferUp()
     selectCurrentLine();
     tempTimer(0, sb.scrollBufferUp);
   else
-    echo("Finished up, moving down");
     tempTimer(0, sb.scrollBufferDown);
   end
 end
